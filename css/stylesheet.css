@@ -3,14 +3,53 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Soleto';
+    font-size: 1.25rem;
     font-weight: 300;
+}
+
+#gridWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 15vh 85vh 50vh 50vh 50vh 25vh;
+    grid-template-areas: 
+    "he he"
+    "s1 s1"
+    "s2 s2"
+    "s3 s3"
+    "s4 s4"
+    "fo fo"
+    ;
+}
+
+#header {
+    grid-area: he;
+    display: flex;
+    background-color: aqua;
 }
 
 h1 {
     font-size: 2.5rem;
     font-weight: 700;
+}
+
+.navLinks {
+    font-size: 2rem;
+}
+
+.navLinks a {
+    text-decoration: none;
+}
+
+.burgerMenu div {
+    width: 35px;
+    height: 0.25rem;
+    background-color: black;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 10%;
 }
