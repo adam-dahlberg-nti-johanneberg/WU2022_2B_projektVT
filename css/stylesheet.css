@@ -70,6 +70,11 @@ h3 {
     font-weight: 400;
 }
 
+h4 {
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -222,14 +227,13 @@ footer {
     grid-area: fo;
     display: flex;
     flex-direction: column;
-    background-color: var(--granitgra);
-    background-image: linear-gradient(135deg, var(--granitgra), var(--turkosmint));
+    background-image: linear-gradient(45deg, var(--magenta), var(--ultraviolett));
     /* background-image: linear-gradient(to right, var(--magenta), var(--ultraviolett), var(--ultramarin), var(--turkosmint)); */
 }
 
 #footerAdress {
     margin: 30px;
-    color: var(--kolgra);
+    color: var(--granitgra);
 }
 
 #footerLogo img {
@@ -318,7 +322,7 @@ footer {
 #gridWrapperStyrelse {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto  50vh auto 50vh auto 50vh auto auto;
+    grid-template-rows: auto  50vh auto 50vh auto 50vh auto 50vh auto auto;
     grid-template-areas: 
     "ss ss"
     "p1 p1"
@@ -397,6 +401,23 @@ footer {
     object-fit: cover;
 }
 
+.QA {
+    margin-top: 2rem;
+}
+
+.responsibilities {
+    list-style-type: disc;
+    margin-left: 25px;
+}
+
+.styrelseDescription h4 {
+    margin-top: 2rem;
+}
+
+/* HERE BEGINS EXCLUSIVE STYLING FOR "kontakt.html" */
+
+
+
 @media only screen and (min-width: 768px) {
     #gridWrapper {
         display: grid;
@@ -440,7 +461,7 @@ footer {
     #gridWrapperStyrelse {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto 70vh 70vh 70vh 70vh auto;
+        grid-template-rows: auto 80vh 80vh 80vh 80vh auto;
         grid-template-areas: 
         "ss ss"
         "b1 p1"
