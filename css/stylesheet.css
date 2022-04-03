@@ -20,14 +20,14 @@ body {
     font-size: 1.25rem;
     font-weight: 300;
     overflow-x: hidden;
+    padding-top: 10vh;
 }
 
 #gridWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 10vh 90vh 50vh 50vh 50vh 25vh;
+    grid-template-rows: 90vh minmax(500px, 750px) 500px 500px 250px;
     grid-template-areas: 
-    "he he"
     "s1 s1"
     "s2 s2"
     "s3 s3"
@@ -38,6 +38,7 @@ body {
 
 #header {
     position: fixed;
+    top: 0;
     height: 10vh;
     width: 100vw;
     grid-area: he;
@@ -53,9 +54,19 @@ h1 {
     color: var(--granitgra);
 }
 
+h2 {
+    font-size: 2.25rem;
+    font-weight: 400;
+    text-align: center;
+}
+
 a {
     text-decoration: none;
     color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 ul {
@@ -66,15 +77,15 @@ nav {
     position: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 90vh;
     width: 250px;
-    background-color: var(--magenta);
+    background-color: #a00768;
     right: 0px;
     transform: translateX(250px);
     top: 10vh;
-    /* opacity: 0; */
+    opacity: 0;
     transition: all 0.5s;
 }
 
@@ -90,8 +101,18 @@ nav {
     font-size: 2rem;
 }
 
+.navLinks li {
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
 .navLinks a {
     text-decoration: none;
+    color: var(--granitgra);
+}
+
+.navLinks a:hover {
+    text-decoration: underline;
 }
 
 .navActive {
@@ -102,12 +123,16 @@ nav {
 .burgerMenu div {
     width: 2.188rem;
     height: 0.25rem;
-    background-color: var(--turkosmint);
+    background-color: var(--granitgra);
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     margin-right: 2.5vw;
     border-radius: 0.1rem;
     transition: all 0.5s;
+}
+
+.burgerMenu:hover {
+    cursor: pointer;
 }
 
 .toggle #burgerLine2 {
@@ -129,18 +154,9 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     background-color: var(--granitgra);
     color: var(--kolgra);
-}
-
-h2 {
-    font-size: 2.25rem;
-    font-weight: 400;
-    text-align: center;
-}
-
-#schoolMotto1 {
-    margin-top: auto;
 }
 
 #makerspaceLogo {
@@ -149,6 +165,17 @@ h2 {
     margin-bottom: 25px;
 }
 
-#schoolMotto2 {
-    margin-bottom: auto;
+#visionPage {
+    grid-area: s2;
+    background-color: var(--magenta);
+    color: var(--granitgra);
+    padding: 20px;
+}
+
+#visionPage h2 {
+    margin-bottom: 10px;
+}
+
+#gallery {
+    grid-area: s3;
 }
