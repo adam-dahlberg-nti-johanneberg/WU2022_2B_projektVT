@@ -23,6 +23,10 @@ body {
     padding-top: 10vh;
 }
 
+#activePage {
+    text-decoration: underline;
+}
+
 #gridWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -229,6 +233,35 @@ footer {
     margin-bottom: 30px;
 }
 
+/* HERE BEGINS EXCLUSIVE STYLING FOR "maskiner.html" */
+
+#gridWrapperMachine {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 90vh 500px auto 500px auto auto;
+    grid-template-areas: 
+    "ma ma"
+    "m1 m1"
+    "m2 m2"
+    "m3 m3"
+    "fo fo"
+    ;
+    color: var(--granitgra);
+}
+
+#machineStart {
+    grid-area: ma;
+    background-image: linear-gradient(45deg, var(--magenta), var(--ultraviolett));
+    padding-top: 50px;
+}
+
+#machineStart p {
+    margin-top: 1rem;
+    width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media only screen and (min-width: 768px) {
     #gridWrapper {
         display: grid;
@@ -244,8 +277,9 @@ footer {
     }
 
     #homeSideImage {
-        max-width: 50vw;
-        width: auto;
+        width: 50vw;
+        height: auto;
+        object-fit: cover;
     }
 
     #usps p {
