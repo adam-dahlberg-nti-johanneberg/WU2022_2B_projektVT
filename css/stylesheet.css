@@ -19,6 +19,7 @@ body {
     font-family: 'Soleto';
     font-size: 1.25rem;
     font-weight: 300;
+    overflow-x: hidden;
 }
 
 #gridWrapper {
@@ -43,12 +44,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: aqua;
+    background-color: var(--kolgra);
 }
 
 h1 {
     font-size: 2.5rem;
     font-weight: 700;
+    color: var(--granitgra);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 ul {
@@ -56,21 +63,27 @@ ul {
 }
 
 nav {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 90vh;
     width: 250px;
-    background-color: blueviolet;
-    right: -250px;
+    background-color: var(--magenta);
+    right: 0px;
+    transform: translateX(250px);
     top: 10vh;
+    /* opacity: 0; */
     transition: all 0.5s;
 }
 
 #titleText {
-    margin-left: 5px;
+    margin-left: 1vw;
+}
+
+#titleTextThin {
+    font-weight: 300;
 }
 
 .navLinks {
@@ -82,22 +95,23 @@ nav {
 }
 
 .navActive {
-    transform: translateX(-250px);
+    transform: translateX(0);
+    opacity: 100;
 }
 
 .burgerMenu div {
     width: 2.188rem;
     height: 0.25rem;
-    background-color: black;
+    background-color: var(--turkosmint);
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    margin-right: 25px;
+    margin-right: 2.5vw;
     border-radius: 0.1rem;
     transition: all 0.5s;
 }
 
 .toggle #burgerLine2 {
-    transform: rotate(405deg);
+    transform: rotate(360deg);
 }
 
 .toggle #burgerLine1 {
@@ -115,7 +129,8 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: aquamarine;
+    background-color: var(--granitgra);
+    color: var(--kolgra);
 }
 
 h2 {
@@ -129,7 +144,7 @@ h2 {
 }
 
 #makerspaceLogo {
-    width: 100vw;
+    width: 75vw;
     margin-top: 25px;
     margin-bottom: 25px;
 }
