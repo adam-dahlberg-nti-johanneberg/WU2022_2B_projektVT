@@ -18,7 +18,7 @@
 body {
     font-family: 'Soleto';
     font-size: 1.5rem;
-    font-weight: 200;
+    font-weight: 300;
     overflow-x: hidden;
     padding-top: 10vh;
 }
@@ -416,7 +416,39 @@ footer {
 
 /* HERE BEGINS EXCLUSIVE STYLING FOR "kontakt.html" */
 
+#contactInfo {
+    background-image: linear-gradient(to right, var(--turkosmint), var(--ultraviolett));
+    padding: 30px;
+    word-wrap: break-word;
+}
 
+#contactInfo p {
+    text-align: center;
+}
+
+#contactInfo h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#contactInfo h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#contactInfo h4 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#contactInfo li {
+    margin-bottom: 1rem;
+}
+
+#QR {
+    margin-top: 1rem;
+    box-shadow: 5px 5px var(--kolgra);
+}
 
 @media only screen and (min-width: 768px) {
     #gridWrapper {
@@ -461,7 +493,7 @@ footer {
     #gridWrapperStyrelse {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto 80vh 80vh 80vh 80vh auto;
+        grid-template-rows: auto 100vh 100vh 100vh 100vh auto;
         grid-template-areas: 
         "ss ss"
         "b1 p1"
