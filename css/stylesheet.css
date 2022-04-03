@@ -65,6 +65,11 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -224,6 +229,7 @@ footer {
 
 #footerAdress {
     margin: 30px;
+    color: var(--kolgra);
 }
 
 #footerLogo img {
@@ -238,12 +244,15 @@ footer {
 #gridWrapperMachine {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 90vh 500px auto 500px auto auto;
+    grid-template-rows: auto  50vh auto 50vh auto 50vh auto auto;
     grid-template-areas: 
     "ma ma"
     "m1 m1"
+    "d1 d1"
     "m2 m2"
+    "d2 d2"
     "m3 m3"
+    "d3 d3"
     "fo fo"
     ;
     color: var(--granitgra);
@@ -251,7 +260,7 @@ footer {
 
 #machineStart {
     grid-area: ma;
-    background-image: linear-gradient(45deg, var(--magenta), var(--ultraviolett));
+    background-image: linear-gradient(45deg, var(--ultramarin), var(--ultraviolett));
     padding-top: 50px;
 }
 
@@ -260,6 +269,132 @@ footer {
     width: 75vw;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 50px;
+}
+
+#prusaPrinters {
+    grid-area: d1;
+}
+
+#prusaImage {
+    grid-area: m1;
+}
+
+#laserCutter {
+    grid-area: d2;
+}
+
+#laserImage {
+    grid-area: m2;
+}
+
+#slaPrinter {
+    grid-area: d3;
+}
+
+#slaImage {
+    grid-area: m3;
+}
+
+.machineDescription {
+    background-color: var(--granitgra);
+    color: var(--kolgra);
+    padding: 30px 30px 70px 30px;
+}
+
+.machineDescription h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.machineImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* HERE BEGINS EXCLUSIVE STYLING FOR "styrelsen.html" */
+
+#gridWrapperStyrelse {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto  50vh auto 50vh auto 50vh auto auto;
+    grid-template-areas: 
+    "ss ss"
+    "p1 p1"
+    "b1 b1"
+    "p2 p2"
+    "b2 b2"
+    "p3 p3"
+    "b3 b3"
+    "p4 p4"
+    "b4 b4"
+    "fo fo"
+    ;
+    color: var(--granitgra);
+}
+
+#styrelseStart {
+    grid-area: ss;
+    background-image: linear-gradient(305deg, var(--turkosmint), var(--magenta));
+    padding-top: 50px;
+}
+
+#styrelseStart p {
+    margin-top: 1rem;
+    width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+}
+
+#timCasserby {
+    grid-area: b1;
+}
+
+#timImage {
+    grid-area: p1;
+}
+
+#adamDahlberg {
+    grid-area: b2;
+}
+
+#adamImage {
+    grid-area: p2;
+}
+
+#hjalmarMartinsson {
+    grid-area: b3;
+}
+
+#hjalmarImage {
+    grid-area: p3;
+}
+
+#axelWheeler {
+    grid-area: b4;
+}
+
+#axelImage {
+    grid-area: p4;
+}
+
+.styrelseDescription {
+    background-color: var(--granitgra);
+    color: var(--kolgra);
+    padding: 30px 30px 70px 30px;
+}
+
+.styrelseDescription h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.styrelseImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 @media only screen and (min-width: 768px) {
@@ -286,5 +421,34 @@ footer {
         width: 75vw;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    #gridWrapperMachine {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto  70vh 70vh 70vh auto;
+        grid-template-areas: 
+        "ma ma"
+        "m1 d1"
+        "m2 d2"
+        "m3 d3"
+        "fo fo"
+        ;
+        color: var(--granitgra);
+    }
+
+    #gridWrapperStyrelse {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 70vh 70vh 70vh 70vh auto;
+        grid-template-areas: 
+        "ss ss"
+        "b1 p1"
+        "b2 p2"
+        "b3 p3"
+        "b4 p4"
+        "fo fo"
+        ;
+        color: var(--granitgra);
     }
 }
