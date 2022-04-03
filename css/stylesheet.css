@@ -17,8 +17,8 @@
 
 body {
     font-family: 'Soleto';
-    font-size: 1.25rem;
-    font-weight: 300;
+    font-size: 1.5rem;
+    font-weight: 200;
     overflow-x: hidden;
     padding-top: 10vh;
 }
@@ -26,11 +26,12 @@ body {
 #gridWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 90vh minmax(500px, 750px) 500px 500px 250px;
+    grid-template-rows: 90vh 500px auto 500px auto auto;
     grid-template-areas: 
     "s1 s1"
     "s2 s2"
     "s3 s3"
+    "sI sI"
     "s4 s4"
     "fo fo"
     ;
@@ -81,7 +82,7 @@ nav {
     align-items: center;
     height: 90vh;
     width: 250px;
-    background-color: #a00768;
+    background-image: linear-gradient(305deg, var(--ultraviolett), var(--magenta));
     right: 0px;
     transform: translateX(250px);
     top: 10vh;
@@ -165,17 +166,91 @@ nav {
     margin-bottom: 25px;
 }
 
-#visionPage {
+#homeImage1 {
     grid-area: s2;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#visionPage {
+    grid-area: s3;
     background-color: var(--magenta);
     color: var(--granitgra);
-    padding: 20px;
+    padding: 30px;
+}
+
+#visionPage p {
+    margin-bottom: 1rem;
 }
 
 #visionPage h2 {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
-#gallery {
-    grid-area: s3;
+#homeSideImage {
+    grid-area: sI;
+    height: 100%;
+    width: 100vw;
+}
+
+#usps {
+    grid-area: s4;
+    background-color: var(--ultraviolett);
+    color: var(--granitgra);
+    padding: 30px;
+}
+
+#usps p {
+    margin-bottom: 1rem;
+}
+
+#usps h2 {
+    margin-bottom: 1rem;
+}
+
+footer {
+    grid-area: fo;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--granitgra);
+    background-image: linear-gradient(135deg, var(--granitgra), var(--turkosmint));
+    /* background-image: linear-gradient(to right, var(--magenta), var(--ultraviolett), var(--ultramarin), var(--turkosmint)); */
+}
+
+#footerAdress {
+    margin: 30px;
+}
+
+#footerLogo img {
+    height: 50px;
+    width: auto;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+    #gridWrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 90vh 500px auto auto auto;
+        grid-template-areas: 
+        "s1 s1"
+        "s2 s2"
+        "s3 sI"
+        "s4 s4"
+        "fo fo"
+        ;
+    }
+
+    #homeSideImage {
+        max-width: 50vw;
+        width: auto;
+    }
+
+    #usps p {
+        width: 75vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
