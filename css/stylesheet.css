@@ -132,7 +132,7 @@ nav {
 
 .navActive {
     transform: translateX(0);
-    opacity: 100;
+    opacity: 1;
 }
 
 .burgerMenu div {
